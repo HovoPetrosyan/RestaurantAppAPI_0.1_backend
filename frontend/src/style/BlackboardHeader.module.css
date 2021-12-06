@@ -1,0 +1,70 @@
+.main{
+    height: 15%;
+    display: grid;
+    grid-template-rows: 66px 1fr;
+}
+.box{
+    height: 100%;
+    background-color: #373D46;
+    padding: 0 38px;
+    display: flex;
+    gap: 33px;
+    align-items: center;
+    position: relative;
+}
+
+.box img{
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+}
+
+.box h3{
+    color: #F8F8F8;
+
+}
+
+.hall{
+    color: #F8F8F8;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.tableNumber{
+    color: #F8F8F8;
+
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.situation{
+    height: 100%;
+    padding: 0 38px;
+}
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.situation button{
+    display: flex;
+    align-items: center;
+}
+.situation p{
+    color: #373D46;
+
+}
+.situation h2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #333333;
+    font-size: 20px;
+    font-weight: normal;
+}

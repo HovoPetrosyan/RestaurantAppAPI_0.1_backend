@@ -1,0 +1,41 @@
+.box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+.active{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+    background-color: rgba(0,0,0,.2);
+}
+
+.content{
+    width: 474px;
+    height: 232px;
+    background-color: #F8F8F8;
+    padding: 43px 0 60px 0;
+    display: grid;
+    justify-items: center;
+    align-content: space-between;
+}
+.content h3{
+    color: #373D46;
+    font-size: 20px;
+}
