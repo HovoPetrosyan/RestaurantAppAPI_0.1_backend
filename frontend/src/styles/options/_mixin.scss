@@ -1,0 +1,56 @@
+@mixin grid($col, $row){
+    display: grid;
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+}
+
+@mixin scrollbar{
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        width: 14px;
+        border: 1px solid $lightGrey;
+        border-radius: 20px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $lightGrey;
+        border-radius: 20px;
+    
+    }
+}
+
+@mixin screen{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    z-index: 10;
+    background-color: transparent;
+    @include transition(.4s);
+    &.active{
+        transform: translateX(0);
+        animation: show .4s .4s forwards;
+    }
+}
+
+@mixin transition($sec){
+    transition: all $sec ease-in-out;
+}
+
+@mixin container{
+    width: 100%;
+    height: 100%;
+    padding: 0 38px;
+    position: relative;
+}
+
+
+@keyframes show{
+    to{
+        background-color: rgba(0,0,0,.2);
+    }
+}

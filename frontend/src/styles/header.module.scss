@@ -1,0 +1,66 @@
+@import "./options/mixin";
+@import "./options/color";
+.box{
+    height: 15%;
+    display: grid;
+    grid-template-rows: 55px 1fr;
+}
+.header{
+    @include container;
+    background-color: $black;
+    display: flex;
+    gap: 33px;
+    align-items: center;
+    position: relative;
+    img{
+        width: 42px;
+        height: 42px;
+        border-radius: 50px;
+    }
+    h3{
+        color: $white;
+        font-size: 15px;
+    }
+    .hall{
+        color: $white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+    }
+    .tableNumber{
+        color: $white;
+        position: absolute;
+        left: 60%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+    }
+}
+
+
+.state{
+    @include container;
+    & > div{
+        height: 100%;
+        @include grid(1fr 1fr 1fr, 1fr);
+        align-items: center;
+        position: relative;
+        div{
+            justify-self: end;
+        }
+    }
+    button{
+        display: flex;
+        align-items: center;
+    }
+    h2{
+        color: $darkBlack;
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal;
+    }
+}
+
+

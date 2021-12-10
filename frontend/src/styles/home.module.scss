@@ -1,0 +1,78 @@
+@import "./options/color";
+@import "./options/mixin";
+
+.box {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.header{
+    margin: 39px;
+    position: relative;
+    button {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-self: flex-start;
+        color: $black;
+    }
+    .logo{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.content {
+    width: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    grid-gap: 33px;
+}
+.password {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 25px;
+    grid-template-rows: 25px;
+    grid-gap: 20px;
+    justify-content: center;
+    div{
+        @include transition(.2s);
+        width: 100%;
+        height: 100%;
+        border: 1px solid $lightGrey;
+        border-radius: 50%;
+        &.active{
+            background-color: $darkBlack;
+        }
+    }
+}
+.numbers{
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(4, 90px);
+    grid-gap: 27px;
+    button{
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        border-radius: 50%;
+        font-size: 30px;
+        box-shadow: 0px 2px 4px $shadowColor;
+        position: relative;
+        color: $darkBlack;
+        &:active{
+            background-color: $hoverColor;
+        }
+    }
+    img{
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}

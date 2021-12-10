@@ -1,0 +1,53 @@
+@import "./options/mixin";
+@import "./options/color";
+
+.box {
+    @include screen;
+    & > div{
+        width: 600px;
+        height: 260px;
+        background-color: $white;
+    }
+    h2{
+        height: 46px;
+        line-height: 46px;
+        background-color: $black;
+        color: $white;
+        text-align: center;
+        font-size: 15px;
+    }
+    section{
+        @include grid(1fr 1fr, 1fr 1fr);
+        width: 490px;
+        height: 54px;
+        margin: 22px auto 37px auto;
+        padding: 9px 23px;
+        grid-column: 60px;
+        border: 1px solid $darkWhite;
+        box-sizing: border-box;
+        border-radius: 4px;
+        div{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            justify-items: end;
+        
+        }
+        h3{
+            font-size: 15px;
+            &:last-child{
+                margin-top: 2px;
+                grid-column: 1 / span 2;
+            }
+        }
+    }
+    button{
+        width: 25%;
+        height: 20%;
+        margin: 0 12.5%;
+        background-color: $green;
+        font-size: 20px;
+        color: $white;
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,91 @@
+@import "./options/mixin";
+@import "./options/color";
+.box{
+    @include screen;
+    & > div{
+        width: 680px;
+        height: 380px;
+        background-color: $white;
+    }
+}
+.header{
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    position: relative;
+    background-color: $black;
+    h2{
+        color: $white;
+        font-size: 20px;
+    }
+    button {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 45px;
+        top: 12px;
+    }
+}
+
+.container{
+    height: 332px;
+    @include grid(2fr 1fr, 1fr);
+}
+.left{
+    height: 100%;
+    background-color: $darkWhite;
+    @include grid(1fr, 66px 66px);
+    align-content: space-around;
+    padding: 67px 0;
+    grid-gap: 67px;
+    justify-items: center;
+    button{
+        width: 202px;
+        height: 100%;
+        color: $white;
+        font-size: 20px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        &:first-child{
+            background-color: $black;
+            &.cancel{
+                background-color: $orange;
+                font-size: 13px;
+            }
+        }
+        &:last-child{
+            background-color: $green;
+        }
+        &:disabled{
+            color: transparent;
+            background-color: $white;
+        }
+        
+    }
+}
+.right{
+    height: 100%;
+    display: grid;
+    grid-auto-rows: 67px;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    h3{
+        text-align: center;
+    }
+    button{
+        width: 66px;
+        height: 66px;
+        color: $white;
+        border-radius: 4px;
+        background-color: $green;
+        margin: 0 auto;
+        font-size: 50px;
+    }
+    h2{
+        text-align: center;
+        font-size: 40px;
+        color: $green;
+    }
+    
+}

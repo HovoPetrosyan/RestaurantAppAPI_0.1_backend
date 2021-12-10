@@ -1,0 +1,62 @@
+@import "./options/color";
+@import "./options/animations";
+@import "./options/mixin";
+
+.box{
+    @include screen;
+    & > div{
+        width: 80%;
+        height: 80%;
+        display: grid;
+        grid-template-rows: 48px 1fr;
+    }
+}
+.userActive img{
+    border: 4px solid $green;
+}
+.header{
+    background-color: $black;
+    text-align: center;
+    line-height: 48px;
+    position: relative;
+    h2{
+        color: $white;
+        font-size: 20px;
+    }
+    button {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 45px;
+        top: 12px;
+    }
+}
+
+.content {
+    background-color: $white;
+    overflow: hidden;
+    & > div {
+        @include grid(repeat(6, 155px), 155px);
+        @include scrollbar;
+        height: 90%;
+        margin: 2.5%;
+        grid-auto-rows: 220px;
+        grid-gap: 10px;
+        justify-content: center;
+        overflow-y: auto;
+    }
+    .active img{
+        height: 100%;
+        border-radius: 8px;
+        border: 3px solid $green;
+    }
+    img{
+        width: 100%;
+        height: 155px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 4px rgba(black , 0.25);
+    }
+    h3{
+        text-align: center;
+    }    
+}

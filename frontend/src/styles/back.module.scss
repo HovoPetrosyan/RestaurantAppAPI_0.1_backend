@@ -1,0 +1,15 @@
+@import "./options/color";
+
+.box{
+    width: 80px;
+    height: 80px;
+    background-color: $black;
+    border-radius: 4px;
+    position: absolute;
+    left: 38px;
+    bottom: 8px;
+    img{
+        width: 45px;
+        height: 45px;
+    }
+}

@@ -1,0 +1,45 @@
+@import "./options/color";
+@import "./options/mixin";
+
+html, body, #root{
+    height: 100%;
+    margin: 0;
+    background-color: $darkWhite;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    color: $black;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-weight: 100;
+    list-style-type: none;
+}
+
+.picker-container .picker-column .picker-item.picker-item-selected{
+    color: $green
+}
+.picker-item{
+    font-size: 40px !important;
+}
+.picker-highlight{
+    height: 50px !important;
+    width: 110px !important;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    &:before, &:after{
+        height: 2px !important;
+        background-color: transparent !important;
+        background-image: linear-gradient(to right, rgba($darkWhite, .2) 10%, $darkWhite, rgba($darkWhite, .2) 90%) !important
+    }
+}
+@keyframes show{
+    to{
+        background-color: rgba(black ,.2);
+    }
+}

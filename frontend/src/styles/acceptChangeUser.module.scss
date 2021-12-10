@@ -1,0 +1,42 @@
+@import "./options/color";
+@import "./options/animations";
+@import "./options/mixin";
+
+
+
+.box{
+    @include screen;
+    & > div{
+        width: 480px;
+        height: 260px;
+        display: grid;
+        grid-template-rows: 48px 1fr;
+    }
+    h2{
+        height: 100%;
+        text-align: center;
+        color: $white;
+        background-color: $black;
+        line-height: 48px;
+        font-size: 15px;
+    }
+    .content{
+        background-color: $white;
+        h3{
+            font-size: 20px;
+            text-align: center;
+            margin: 33px auto;
+            margin-bottom: 40px;
+
+        }
+        button{
+            width: 20%;
+            height: 45px;
+            background-color: $green;
+            border-radius: 4px;
+            color: $white;
+            font-size: 20px;
+            margin-left: 20%;
+        }
+    }
+}
